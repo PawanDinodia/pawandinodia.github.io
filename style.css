@@ -8,23 +8,55 @@
 
 body{
 /*background: #2C3E50;*/
-background: url('img/background.jpg');
+background: url('img/bg16.png');
 }
+.main{
+  background: #0003;
+}
+/*__________________________________navigation bar______________________________________*/
 .navigation-bar{
-  background: #011b;
+  background: #000;
   position: fixed;
-  height: 60px;
+  font-size: 20px;
+  height: 58px;
   top:0px;
   width: 100%;
   z-index: 200;
 }
-.main{
-  background: rgba(0,0,0,.4);
+
+.navigation-bar ul{
+  margin-left: 20px;
 }
+.navigation-bar li{
+  float:left;
+  font-size: 18px;
+  list-style-type: none;
+  margin: auto 5px;
+}
+.navigation-bar a{
+text-decoration: none;
+color:#0009;
+background: #fff8;
+padding:16px 14px;
+display: block;
+}
+.navigation-bar a:hover{
+  color:black;
+  background:white;
+}
+.navigation-bar a.active{
+  color:black;
+  background:white;
+}
+
+/*__________________________________INTRO______________________________________*/
 .intro{
   margin:200px 35px 0px;
-  background: #0008;
+  /*background: #C9302Ccc;*/
+  background: #FF9800cc;
   padding: 15px;
+  height: 350px;
+  border:4px solid #2B2E3Caa;
 }
 .profile-pic{
   margin-top:-100px;
@@ -36,17 +68,13 @@ background: url('img/background.jpg');
   box-shadow: 3px 3px 4px 4px #2B2E3C88;
 }
 .img-rounded:hover{
-  box-shadow: 6px 6px 6px 6px #2B2E3C88;
+  box-shadow: 0px 0px 16px 16px #0008;
 }
-.name{
-  font-size: 3em;
-  font-family: 'Creepster', cursive;
-  margin: 8px;
-  padding:8px;
-  color:white;
+.name img{
+  padding:10px;
+  margin:20px;
 }
 .social{
-  margin-top: 20px;
   font-family: 'Flavors', cursive;
   font-size: 2em;
   color: #fff;
@@ -58,69 +86,78 @@ background: url('img/background.jpg');
 .social li .fa{
   color:white;
   font-size:30px;
-  margin: 15px;
   padding:15px;
-  border:4px solid #fff;
-  border-radius: 50px;
-}
-@-webkit-keyframes example {
-  from{
-    font-size:30px;
-    margin: 15px;
-    opacity: 1;
-  }
-  to{
-    font-size:60px;
-    margin: 0px;
-    opacity: .25;
-  }
+  border: 2px solid #2B2E3C00;
 }
 
-@keyframes example {
-  from{
-    font-size:30px;
-    margin: 15px;
-    opacity: 1;
-  }
-  to{
-    font-size:60px;
-    margin: 0px;
-    opacity:.25;
-  }
-}
 .social li .fa:hover{
-    animation-name: example;
-    animation-duration: .5s;
-    animation-fill-mode: forwards;
-    -webkit-animation-name:example;
-    -webkit-animation-duration:.5s;
-    -webkit-animation-duration:forwards;
-    -moz-animation-name:example;
-    -moz-animation-duration:example;
-    -moz-animation-fill-mode:forwards;
-    -o-animation-name:example;
-    -o-animation-duration:.5s;
-    -o-animation-fill-mode:forwards;
+    background: #ff05;
+    border-radius: 10px;
+    border: 2px solid #2B2E3C55;
 }
-.intro-text li{
-  list-style-type: none;
-  font-size: 25px;
+.social li .fa-facebook:hover{
+  background: #4867AA;
+  border-radius: 10px;
+}
+.social li .fa-twitter:hover{
+  background: #1DA1F2;
+  border-radius: 10px;
+}
+.social li .fa-linkedin:hover{
+  background: #007BB6;
+  border-radius: 10px;
+}
+.social li .fa-google-plus:hover{
+  background: #DD5044;
+  border-radius: 10px;
+}
+.social li .fa-github:hover{
+  background: #24292E;
+  border-radius: 10px;
+}
+.social li .fa-free-code-camp:hover{
+  background: #006400;
+  border-radius: 10px;
+}
+
+/*__________________________________heading______________________________________*/
+.heading{
+  padding:10px;
+  font-size:50px;
   color:white;
+  margin: 30px auto;
+  background:#2B2E3C;
+  width:100%;
+  font-family: 'arial header';
+  font-weight: 900;
+  border-top:5px #FF9800 solid;
+  border-bottom:5px #C9302C solid;
+  border-left:5px #FF9800 solid;
+  border-right:5px #C9302C solid;
+  border-radius: 10px;
 }
-.intro-text li i{
-  padding: 10px;
+
+/*__________________________________Profession_____________________________________*/
+.container{
+  width:100%;
+}
+.about{
+  margin:30px auto;
 }
 .profession{
   color:white;
   font-size: 25px;
   padding: 10px;
-  margin: 10px;
-  height: 280px;
-  border: 1px white solid;
+  height: 300px;
+  border: 5px #000a solid;
   display: inline-block;
   border-radius: 10px;
-  background: #000a;
-  margin-top: 30px;
+  background: #C9302Cee;
+  margin:5px;
+  font-weight: 600;
+}
+.profession:hover{
+  box-shadow: 0px 0px 16px 16px #0004;
 }
 .profession a{
   text-decoration: none;
@@ -142,105 +179,153 @@ padding:8px;
 font-size: 15px;
 padding:8px;
 }
-.heading{
-  font-size:30px;
-  color:white;
-  background: rgba(70, 63, 69,.4);
+
+
+/*__________________________________Education______________________________________*/
+.studies{
+  margin:30px auto;
 }
-.sub-heading{
+.study{
+  font-weight: 600;
+  color:white;
   font-size: 25px;
-  margin-left: 25px;
-  margin-right: 25px;
-  color:white;
-  background: rgba(70, 63, 69,.8);
-  border:3px solid #2B2E3C;
-  border-radius: 12px;
-  padding:8px;
-}
-.projects{
-  background: #000;
-}
-.project-tiles{
-  font-size:15px;
+  padding: 10px;
+  height: 320px;
+  border: 15px #0005 solid;
+  display: inline-block;
   border-radius: 10px;
-  background: rgba(0,0,0,.8);
-  height: 300px;
-  border: 1px white solid;
+  background: #000c;
+  margin:5px;
 }
-.project-title{
-font-size: 30px;
-color:white;
+.study:hover{
+  box-shadow: 0px 0px 16px 16px #0005;
+}
+.study a{
+  text-decoration: none;
+}
+.study a:hover{
+  text-decoration: none;
+}
+.study-heading{
+font-size: 25px;
 padding:8px;
 }
-.project-image{
-  padding:8px;
+.study-icon{
+font-size: 50px;
+padding:8px;
 }
-.project-description{
-  color:white;
-  padding:8px;
+.study-description{
+font-size: 15px;
+padding:8px;
+font-weight: 600;
 }
-.col-xs-4{
-  padding: 8px;
+.fortis{
+  border: 15px #008F2D88 solid;
 }
-
-@media screen and (max-width:600px){
-  body{
-
-  }
-  .main{
-    background: rgba(0,0,0,.8);
-  }
-  .intro{
-    margin:10px 5px 0px;
-    background: #000f;
-    padding: 15px;
-  }
-  .profile-pic{
-    margin-top:0px;
-    height:100px;
-    width:100px;
-  }
-  .img-rounded{
-    border:2px solid #2B2E3C;
-    box-shadow: 3px 3px 4px 4px #2B2E3C88;
-  }
-.name{
-  font-size: 1.5em;
-  font-family:'Times new Roman';
+.saroj{
+  border: 15px #0098BF88 solid;
 }
-.social{
-  margin-top: 10px;
-  padding: 30px;
+.dcrust{
+  border: 15px #5FA60088 solid;
 }
-.social ul li{
+/*__________________________________Skills______________________________________*/
+.skill .catagories li{
   list-style-type: none;
-  display: inline-block;
+  margin:8px;
+  text-align: center;
 }
-.social li .fa{
+.skill .catagories li a{
+  font-weight: 600;
+  display: block;
+  padding:16px 14px;
+  background:black;
   color:white;
-  font-size:15px;
-  margin: 8px;
-  padding:8px;
-  border:2px solid #fff;
-  border-radius: 30px;
+  text-decoration: none;
+  border-radius: 10px;
 }
-.profession{
-  color:white;
-  font-size: 15px;
-  padding: 6px;
-  margin: 6px;
-  border: 1px white solid;
+.skill .catagories li.active a{
+border-right: 15px solid green;
+}
+.skill .catagories li a:hover{
+  background:white;
+  color:black;
+  box-shadow: 0px 0px 9px 9px #00000088;
+}
+.skill .catagory-content{
+  height: 420px;
+  width: 100%;
+  background:#0008;
+  border-radius: 10px;
+}
+
+/*__________________________________Projects______________________________________*/
+.projects{
+  margin:30px auto;
+}
+.project{
+  color:black;
+  font-size: 25px;
+  padding: 10px;
+  height: 450px;
+  border: 15px #0005 solid;
   display: inline-block;
   border-radius: 10px;
-  background: #000;
-  margin-top: 15px;
+  background: #C4CAA5;
+  margin:5px;
 }
-.project-tiles{
-  height: auto;
+.project:hover{
+  box-shadow: 2px 2px 10px 10px #0005;
 }
-.col-xs-4{
+.project a{
+  text-decoration: none;
+  color:black;
+}
+.project a:hover{
+  text-decoration: none;
+}
+.project-heading{
+font-size: 25px;
+padding:8px;
+}
+.project-icon{
+font-size: 50px;
+padding:8px;
+}
+.project-description{
+font-size: 15px;
+padding:8px;
+}
+/*__________________________________contacts______________________________________*/
+.contact{
   width:100%;
-  padding:8px;
 }
-
+/*__________________________________footer______________________________________*/
+form{
+  display: flex;
+  align-items: center;
+}
+.form-container{
+  padding:20px;
+  background:#FF9800;
+  overflow: hidden;
+  margin-left: 35%;
+  border: 3px solid #2B2E3C;
+  border-radius: 10px
+}
+.border-control{
+  border: 2px solid #2B2E3C;
+}
+textarea{
+  padding:10px;
+}
+.footer{
+  text-align: right;
+  font-size: 20px;
+  font-weight: 800;
+  height: 120px;
+  width: 100%;
+  background: #0008;
+  color:#fff;
+  padding:20px;
+  bottom:0;
 }
