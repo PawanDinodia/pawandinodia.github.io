@@ -1,2 +1,2 @@
 # pawandinodia.github.io
-## %%%-----This is my personal Portfolio repositry. -----%%%
+## This is my personal Portfolio repositry.
